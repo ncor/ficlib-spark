@@ -1,0 +1,6 @@
+package ficlib.shared.v1;
+
+message Error {
+    required string code = 1;
+    optional string message = 2;
+}

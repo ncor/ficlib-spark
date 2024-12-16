@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package ficlib.auth.v1;
+
+import "shared/v1/shared.proto";
+
+message TelegramLoginCallbackRequest {
+  string auth_date = 1;
+  string first_name = 2;
+  string id = 3;
+  string last_name = 4;
+  string photo_url = 5;
+  string username = 6;
+  string hash = 7;
+}
+
+message TelegramLoginCallbackReply {
+  oneof response {
+    string session_id = 1;
+    ficlib.shared.v1.Error error = 2;
+  }
+}

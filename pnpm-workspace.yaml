@@ -1,0 +1,4 @@
+packages:
+    - "apps/services/*"
+    - "packages/schema/ts"
+    - "packages/shared"

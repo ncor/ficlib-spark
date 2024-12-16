@@ -1,0 +1,166 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  apps/services/user:
+    dependencies:
+      '@ficlib/schema':
+        specifier: workspace:*
+        version: link:../../../packages/schema/ts
+      '@ficlib/shared':
+        specifier: workspace:*
+        version: link:../../../packages/shared
+      '@nats-io/nats-core':
+        specifier: 3.0.0-47
+        version: 3.0.0-47
+      '@nats-io/services':
+        specifier: 3.0.0-22
+        version: 3.0.0-22
+      '@nats-io/transport-node':
+        specifier: 3.0.0-32
+        version: 3.0.0-32
+      fp-ts:
+        specifier: ^2.16.9
+        version: 2.16.9
+      typescript:
+        specifier: ^5.0.0
+        version: 5.7.2
+      zod:
+        specifier: ^3.24.1
+        version: 3.24.1
+    devDependencies:
+      '@types/bun':
+        specifier: latest
+        version: 1.1.14
+
+  packages/schema/ts:
+    dependencies:
+      '@bufbuild/protobuf':
+        specifier: ^2.2.2
+        version: 2.2.3
+
+  packages/shared:
+    dependencies:
+      '@nats-io/transport-node':
+        specifier: 3.0.0-32
+        version: 3.0.0-32
+      fp-ts:
+        specifier: ^2.16.9
+        version: 2.16.9
+      zod:
+        specifier: ^3.24.1
+        version: 3.24.1
+    devDependencies:
+      '@types/bun':
+        specifier: ^1.1.14
+        version: 1.1.14
+
+packages:
+
+  '@bufbuild/protobuf@2.2.3':
+    resolution: {integrity: sha512-tFQoXHJdkEOSwj5tRIZSPNUuXK3RaR7T1nUrPgbYX1pUbvqqaaZAsfo+NXBPsz5rZMSKVFrgK1WL8Q/MSLvprg==}
+
+  '@nats-io/nats-core@3.0.0-47':
+    resolution: {integrity: sha512-sh+SVmTTXv286EY/EioIHSuk2ZZRRwuOCZw0SoHxxokedHZaQsaBONAarK9I1foJ+mQXY/ZP0tGhkpt0GpBCpA==}
+
+  '@nats-io/nkeys@2.0.0-3':
+    resolution: {integrity: sha512-ars24TseiM1v5JTdSl9lgFV5ayoq1nqYD5apDn3LoWZM5BFGve11cam2N6F/VVOENCZzuAkLtw/uTN5HDutkmA==}
+    engines: {node: '>=16.0.0'}
+
+  '@nats-io/nuid@2.0.1-2':
+    resolution: {integrity: sha512-oXJiWXH87FjcPAXVVkoY+o7z9YFuOvsVlUlvB4h/QsoC1hp63lB18YOMHmKxVNO7BzvwzJh3SKLlIlsQrEwaxg==}
+    engines: {node: '>= 18.x'}
+
+  '@nats-io/services@3.0.0-22':
+    resolution: {integrity: sha512-XHJDT1Ty2zx8gCOsy/VK8zQR4q4lB5iFe+7Lzlf+4IoJehe9nAygkAefiBkkCXK0BuEATgcM96d/M0QWbfm8PA==}
+
+  '@nats-io/transport-node@3.0.0-32':
+    resolution: {integrity: sha512-gS9VaSBljBT90olZFDrMJvKl1H5Ays5AmNQxdFU/w993RmVI+BVj00Zgjl0iLCwYuzU4LM9JXiHgXp5rwRhbBg==}
+    engines: {node: '>= 18.0.0'}
+
+  '@types/bun@1.1.14':
+    resolution: {integrity: sha512-opVYiFGtO2af0dnWBdZWlioLBoxSdDO5qokaazLhq8XQtGZbY4pY3/JxY8Zdf/hEwGubbp7ErZXoN1+h2yesxA==}
+
+  '@types/node@20.12.14':
+    resolution: {integrity: sha512-scnD59RpYD91xngrQQLGkE+6UrHUPzeKZWhhjBSa3HSkwjbQc38+q3RoIVEwxQGRw3M+j5hpNAM+lgV3cVormg==}
+
+  '@types/ws@8.5.13':
+    resolution: {integrity: sha512-osM/gWBTPKgHV8XkTunnegTRIsvF6owmf5w+JtAfOw472dptdm0dlGv4xCt6GwQRcC2XVOvvRE/0bAoQcL2QkA==}
+
+  bun-types@1.1.37:
+    resolution: {integrity: sha512-C65lv6eBr3LPJWFZ2gswyrGZ82ljnH8flVE03xeXxKhi2ZGtFiO4isRKTKnitbSqtRAcaqYSR6djt1whI66AbA==}
+
+  fp-ts@2.16.9:
+    resolution: {integrity: sha512-+I2+FnVB+tVaxcYyQkHUq7ZdKScaBlX53A41mxQtpIccsfyv8PzdzP7fzp2AY832T4aoK6UZ5WRX/ebGd8uZuQ==}
+
+  tweetnacl@1.0.3:
+    resolution: {integrity: sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==}
+
+  typescript@5.7.2:
+    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+
+  zod@3.24.1:
+    resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
+
+snapshots:
+
+  '@bufbuild/protobuf@2.2.3': {}
+
+  '@nats-io/nats-core@3.0.0-47':
+    dependencies:
+      '@nats-io/nkeys': 2.0.0-3
+      '@nats-io/nuid': 2.0.1-2
+
+  '@nats-io/nkeys@2.0.0-3':
+    dependencies:
+      tweetnacl: 1.0.3
+
+  '@nats-io/nuid@2.0.1-2': {}
+
+  '@nats-io/services@3.0.0-22':
+    dependencies:
+      '@nats-io/nats-core': 3.0.0-47
+
+  '@nats-io/transport-node@3.0.0-32':
+    dependencies:
+      '@nats-io/nats-core': 3.0.0-47
+      '@nats-io/nkeys': 2.0.0-3
+      '@nats-io/nuid': 2.0.1-2
+
+  '@types/bun@1.1.14':
+    dependencies:
+      bun-types: 1.1.37
+
+  '@types/node@20.12.14':
+    dependencies:
+      undici-types: 5.26.5
+
+  '@types/ws@8.5.13':
+    dependencies:
+      '@types/node': 20.12.14
+
+  bun-types@1.1.37:
+    dependencies:
+      '@types/node': 20.12.14
+      '@types/ws': 8.5.13
+
+  fp-ts@2.16.9: {}
+
+  tweetnacl@1.0.3: {}
+
+  typescript@5.7.2: {}
+
+  undici-types@5.26.5: {}
+
+  zod@3.24.1: {}
